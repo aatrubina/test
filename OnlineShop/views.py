@@ -5,12 +5,11 @@ from .serializers import OrderSerializer, PaymentSerializer, ProductSerializer
 from django.shortcuts import render
 
 def home(request):
-    # Ваша логика представления здесь
-    return render(request, 'home.html')  # Пример представления для главной страницы
+    return render(request, 'home.html')
 
 def admin(request):
     return render(request, 'admin_base.html')
-# Представления
+
 class ProductListView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
