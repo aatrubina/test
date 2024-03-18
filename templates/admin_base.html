@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <!-- Подключаем статические файлы CSS для административной панели -->
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/login.css' %}">
+    <!-- Подключаем статические файлы JavaScript для административной панели -->
+    <script type="text/javascript" src="{% static 'admin/js/core.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/admin/RelatedObjectLookup.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+    <!-- Можно добавить другие стили и скрипты по необходимости -->
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+    <div id="container">
+        <div id="header">
+            <div id="branding">
+                <h1 id="site-name">Admin Panel</h1>
+            </div>
+            <!-- Здесь можно добавить дополнительные элементы заголовка, например, меню или ссылки -->
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
